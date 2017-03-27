@@ -12,12 +12,10 @@ The standard rules for Conway's Game of Life are as follows:
 ### Functionality & MVP  
 
 With this Conway's Game of Life simulator, users will be able to:
-
 - [ ] Start, pause, reset, and adjust speed of the game
 - [ ] Select squares to be alive in the initial state
 
 In addition, this project will include:
-
 - [ ] An About modal describing the game and the interface
 - [ ] A production Readme
 
@@ -29,7 +27,7 @@ Bonus:
 
 The app will consist of a navbar with links to my github and portfolio, a game board, and a bar along the bottom containing a button for on About modal as well as controls for the game, including options to play/pause/reset the game, adjust the speed, and select preset or random initial states.
 
-![wireframes](images/js_wireframe.jpeg)
+![wireframes](images/wireframe.jpeg)
 
 ### Architecture and Technologies
 
