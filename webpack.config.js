@@ -1,9 +1,9 @@
 var path = require('path');
 
 module.exports = {
-  entry: './lib/board.js',
+  entry: './lib/game.js',
   output: {
-    path: path.resolve(__dirname),
+    path: path.resolve(__dirname, 'lib'),
     filename: 'bundle.js',
   },
   module: {
