@@ -60,7 +60,7 @@ Generals functionality will be produced using:
 
 ### Implementation Timeline
 
-**Day 1**: Setup all necessary Node modules, including webpack.  
+[COMPLETE] **Day 1**: Setup all necessary Node modules, including webpack.  
 
 Goals for the day:
 - Get a green bundle with `webpack`
