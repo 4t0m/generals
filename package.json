@@ -1,0 +1,24 @@
+{
+  "name": "js_project",
+  "version": "1.0.0",
+  "description": "### Background",
+  "main": "index.js",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-es2015": "^6.24.0",
+    "webpack": "^2.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "hub:4t0m/generals"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
