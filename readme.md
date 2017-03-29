@@ -70,7 +70,7 @@ Goals for the day:
 Goals for the day:
 - Complete the `cell.js` module (constructor, update functions)
 - Complete `city.js` and `mountain.js`
-- Render a grid to the `Canvas`.
+- Render a grid to the `DOM`.
 - Make each `cell` in the grid clickable, toggling the state of the square on click
 
 **Day 3**: Get the cursor and movement working.
