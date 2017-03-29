@@ -65,7 +65,7 @@ Generals functionality will be produced using:
 Goals for the day:
 - Get a green bundle with `webpack`
 
-**Day 2**: Get the basics of `cell`s and the `board` set up.  Render the board on the page.  
+[COMPLETE] **Day 2**: Get the basics of `cell`s and the `board` set up.  Render the board on the page.  
 
 Goals for the day:
 - Complete the `cell.js` module (constructor, update functions)
@@ -77,14 +77,14 @@ Goals for the day:
 
 Goals for the day:
 - Add moves to the move queue using clicks and keypresses
-- Render moves in the queue
 - Update the `board` as moves are executed
 - End the game when a `king` is taken.
+- Render moves in the queue
 
 **Day 4**: Add AI player
 
 Goals for the day:
-- Create controls for game speed, stop, start
+- Add an AI player that moves around the board
 - Fix up styling
 
 **Bonus**:
