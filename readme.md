@@ -79,6 +79,7 @@ Goals for the day:
 - Add moves to the move queue using clicks and keypresses
 - Render moves in the queue
 - Update the `board` as moves are executed
+- End the game when a `king` is taken.
 
 **Day 4**: Add AI player
 
