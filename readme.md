@@ -73,13 +73,13 @@ Goals for the day:
 - Render a grid to the `DOM`.
 - Make each `cell` in the grid clickable, toggling the state of the square on click
 
-**Day 3**: Get the cursor and movement working.
+[COMPLETE] **Day 3**: Get the cursor and movement working.
 
 Goals for the day:
 - Add moves to the move queue using clicks and keypresses
 - Update the `board` as moves are executed
-- End the game when a `king` is taken.
-- Render moves in the queue
+- End the game when a `king` is taken. [LEAVING FOR LATER]
+- Render moves in the queue [LEAVING FOR LATER]
 
 **Day 4**: Add AI player
 
