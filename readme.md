@@ -78,7 +78,7 @@ Goals for the day:
 Goals for the day:
 - Add moves to the move queue using clicks and keypresses
 - Update the `board` as moves are executed
-- End the game when a `king` is taken. 
+- End the game when a `king` is taken.
 - Render moves in the queue [LEAVING FOR LATER]
 
 **Day 4**: Add AI player
@@ -86,6 +86,10 @@ Goals for the day:
 Goals for the day:
 - Add an AI player that moves around the board
 - Fix up styling
+  + about modal
+  + victory modal with play again button
+  + links to github and 
+- Write production readme
 
 **Bonus**:
 - Add options for map-size and game-speed when starting a new game.

@@ -17,7 +17,16 @@ td {
   font-size: 24px;
   text-align: center;
   background-size: contain;
-  border: 5px solid black;
+  border-left: 5px solid black;
+  border-top: 5px solid black;
+}
+
+tr:last-child td {
+  border-bottom: 5px solid black;
+}
+
+td:last-child {
+  border-right: 5px solid black;
 }
 
 .unoccupied {
@@ -45,5 +54,5 @@ td {
 }
 
 .selected {
-  border: 5px solid white;
+  border: 2px solid white;
 }
