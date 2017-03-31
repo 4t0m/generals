@@ -4,14 +4,24 @@
     <meta charset="utf-8">
     <title>Generals</title>
     <link href="./assets/reset.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/modal.css" media="screen" title="no title">
     <link href="./assets/generals.css" rel="stylesheet" type="text/css">
   </head>
   <body>
-    <h1>Generals</h1>
+    <section>
+      <h1>Generals</h1>
+      <img id="info" src="./assets/help-round-button.png" alt="help button" />
+    </section>
     <table id="grid"></table>
+    <div class="about-game is-hidden" id="about-game">
+      <div class="modal-content">
+        <span class="button-close" id="button-close"></span>
+        <h3>Modal Heading</h3>
+        <p>Modal Content</p>
+      </div>
+    </div>
 
-
-    
     <script type="text/javascript" src='vendor/keymaster.js'></script>
     <script type="text/javascript" src='lib/bundle.js'></script>
   </body>
