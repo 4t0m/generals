@@ -1,16 +1,5 @@
 .is-hidden { display: none; }
 
-.button-close {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAowAAAKMB8MeazgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAB5SURBVDiNrZPRCcAwCEQfnUiySAZuF8kSWeH6Yz8KrQZMQAicJ+epAB0YwAmYJKIADLic0/GPPCbQAnLznCd/4NWUFfkgy1VjH8CryA95ApYltAiTRCZxpuoW+gz9WXE6NPeg+ra1UDIxGlWEObe4SGxY5fIxlc75Bkt9V4JS7KWJAAAAAElFTkSuQmCC59ef34356faa7edebc7ed5432ddb673d');
-}
-
 .overlay {
   position: fixed;
   top: 0;
@@ -21,6 +10,7 @@
 }
 
 .modal-content {
+  top: 15%;
   padding: 20px 30px;
   width: 600px;
   position: relative;
@@ -28,16 +18,31 @@
   margin: 5% auto 0;
   background: #fff;
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.modal-content h1,h3 {
+  text-align: center;
+}
+
+.modal-content ul {
+  padding-bottom: 20px;
 }
 
 .buttons {
   display: flex;
+  justify-content: space-around;
 }
 
 .buttons span {
   background-color: #008080;
-  padding: 20px 60px;
+  padding: 15px 45px;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
 }
+
 
 ul {
   list-style: disc;
