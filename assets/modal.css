@@ -27,4 +27,22 @@
   min-height: 300px;
   margin: 5% auto 0;
   background: #fff;
+  display: flex;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons span {
+  background-color: #008080;
+  padding: 20px 60px;
+}
+
+ul {
+  list-style: disc;
+}
+
+li {
+  padding: 5px;
 }

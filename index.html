@@ -16,9 +16,25 @@
     <table id="grid"></table>
     <div class="overlay is-hidden" id="about-game">
       <div class="modal-content">
-        <span class="button-close" id="button-close"></span>
-        <h3>Modal Heading</h3>
-        <p>Modal Content</p>
+        <h3>Generals</h3>
+        <ul>
+          <li>
+            Your goal is to gain territory, and eventually capture the blue General.
+          </li>
+          <li>
+            To move your army, click on a tile you control, and navigate using the arrow keys or WASD.  Orders will be added to your Command Queue, which executes 1 move every .5 seconds.
+          </li>
+          <li>
+            Cities are expensive to capture, but it pays off: captured cities generate an army unit every second.  Other territory generates an army unit every 25 seconds.
+          </li>
+          <li>
+            You win if you capture the blue General, and lose if the blue army captures your General.
+          </li>
+        </ul>
+        <div class="buttons">
+          <span id="play-button-info">Start Over</span>
+          <span id="quit-button-info">Continue</span>
+        </div>
       </div>
     </div>
 
@@ -26,8 +42,8 @@
       <div class="modal-content">
         <h1 id="win-message"></h1>
         <div class="buttons">
-          <span class="play-button" id="play-button">Play Again</span>
-          <span class="quit-button" id="quit-button">Quit</span>
+          <span class="button" id="play-button">Play Again</span>
+          <span class="button" id="quit-button">Quit</span>
         </div>
       </div>
     </div>

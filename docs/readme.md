@@ -1,4 +1,4 @@
-## Generals.io Clone - Production Readme
+## Generals.io Clone - Development Readme
 
 ### Background
 
