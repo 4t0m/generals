@@ -2,7 +2,7 @@
 
 [Live Version](adom.info/generals)
 
-![Game]("./docs/gifs/victory.gif")
+![Game](./docs/gifs/victory.gif)
 
 ### Background
 
@@ -14,7 +14,7 @@
 + Cities are expensive to capture, but it pays off: captured cities generate an army unit every second.  Other territory generates an army unit every 25 seconds.
 + You win if you capture the blue General, and lose if the blue army captures your General.
 
-![Informational Modal]("./docs/gifs/about-modal.gif")
+![Informational Modal](docs/gifs/about-modal.gif)
 
 ### Implementation Details
 
