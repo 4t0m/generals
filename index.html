@@ -14,11 +14,21 @@
       <img id="info" src="./assets/help-round-button.png" alt="help button" />
     </section>
     <table id="grid"></table>
-    <div class="about-game is-hidden" id="about-game">
+    <div class="overlay is-hidden" id="about-game">
       <div class="modal-content">
         <span class="button-close" id="button-close"></span>
         <h3>Modal Heading</h3>
         <p>Modal Content</p>
+      </div>
+    </div>
+
+    <div class="overlay is-hidden" id='win-modal'>
+      <div class="modal-content">
+        <h1 id="win-message"></h1>
+        <div class="buttons">
+          <span class="play-button" id="play-button">Play Again</span>
+          <span class="quit-button" id="quit-button">Quit</span>
+        </div>
       </div>
     </div>
 
