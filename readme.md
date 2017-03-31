@@ -1,97 +1,36 @@
-## Generals.io Clone - Production Readme
+## Generals
+
+[Live Version](adom.info/generals)
+
+![Game]("./docs/gifs/victory.gif")
 
 ### Background
 
-[Generals.io](generals.io) is an online multiplayer game where players compete to gain territory and capture the opponents base.  My implementation will be single-player against a simple bot-player.  
+[Generals.io](generals.io) is an online multiplayer game where players compete to gain territory and capture the opponent's base.  In my implementation of the game, the user plays against an AI opponent.
 
-The rules of the game are as follows:
-1) Every time-step, one move from the move-queue is executed
-2) Every two time-steps, captured cities generate a soldier
-3) Every 25 time-steps, captured cells generate a soldier
+### How To Play:
++ Your goal is to gain territory, and eventually capture the blue General.
++ To move your army, click on a tile you control, and navigate using the arrow keys or WASD.  Orders will be added to your Command Queue, which executes 1 move every .5 seconds.
++ Cities are expensive to capture, but it pays off: captured cities generate an army unit every second.  Other territory generates an army unit every 25 seconds.
++ You win if you capture the blue General, and lose if the blue army captures your General.
 
-### Functionality & MVP  
+![Informational Modal]("./docs/gifs/about-modal.gif")
 
-With this version of Generals, users will be able to:
-- [ ] Click on squares to select them and move using keypresses or by clicking adjacent squares
-- [ ] Capture cities
-- [ ] Play against an AI opponent
+### Implementation Details
 
-Bonus:
-- [ ] Randomly generate maps
-- [ ] Start new games using user selections for map-size and game speed
+As I implemented this project in Vanilla JavaScript, I had to manually keep my data storage and presentation in sync.  The format of the game introduced some interesting challenges here: users input commands in real time by clicking on elements on the page, and using keypresses to move a cursor, but these commands are executed at a fixed rate of 2 per second.
 
-### Wireframes
+The path the Information follows is a bit complex.  The user manipulates the cursor, which adds a new Command to a queue each time it moves.  Each second, the game reads one command (for each player) from the queue and executes it.  Since the Command stores the cell, it has up-to-date information on the color and count of the cell, rather than the state of the cell when the Command was first created.
 
-The app will consist of a navbar with links to my github and portfolio, a game board, and a button for an About modal.
+Finally, every half-second a function iterates through the current state of the board, and updates the HTML Table element.
 
-### Architecture and Technologies
 
-This project will be implemented with the following technologies:
+### To-dos / Future features
 
-- Vanilla JavaScript and `jQuery` for overall structure and game logic,
-- `HTML5 Canvas` for DOM manipulation and rendering,
-- Webpack to bundle and serve up the various scripts.
+There are a few areas in which I'd like to continue development:
 
-Generals functionality will be produced using:
++ Better AI: I'm most interested in building a better AI.  Right now, the BotPlayer simply explores the map, but there are simple heuristics that could turn it into a reasonably strong opponent.  One particular thing I'm excited about is building a tweaked A* algorithm that finds not only the shortest path to the user's General, but the shortest-least-defended path.
 
-`board.js`: this script will handle the logic for creating and updating the necessary elements and rendering them to the DOM.  The board will handle the following:
-- render the current state of all visible `cell`s
-- hold a move-queue with future moves read from the `cursor`
-- each time-step, execute a move from the move-queue
++ Efficiency Improvements: "Premature optimization is the root of all evil," and I haven't run into any performance issues, but I'd like to see what I can do to improve the efficiency of my code, particularly the functions I use to keep my "representation of state" (`board.grid`) in sync with elements in the DOM.  Right now I iterate through the entire grid and set properties for each corresponding HTML element, even those that haven't changed.  I can do better.
 
-`cursor.js`: this script will take user input.  The `board` will read the move queue from the `cursor`, which it will hold as a variable.  The `cursor` is responsible for the following:
-- reading keypresses and storing a queue to be read by the `board`
-- toggling a CSS class `selected` that adds a white border to a `cell`
-- toggling CSS classes `queue-right`, `queue-left`, `queue-up`, and `queue-down` which overlays arrows to indicate queued moves
-
-`cell.js`: this script will have just constructor and update functions.  Each cell will have the following properties:
-- `color`: red, blue, or null
-- `count`: the number of soldiers on the `cell`, if any
-- `isHidden`: whether the user can see
-- `canPass`: always `true`; distinguishes `mountain`s from other `cell`s
-
-`city.js`: this will inherit from `cell`, and will have the following additional characteristics:
-- if `color` is not null, then it will gain a soldier every two turns
-- if `color` is null and `count` is below 40, it will gain a soldier every two turns, otherwise it will not gain any soldiers
-
-`mountain.js`: this will be a singleton with the following properties:
-- `color`: always null
-- `canPass`: always `false`
-
-### Implementation Timeline
-
-[COMPLETE] **Day 1**: Setup all necessary Node modules, including webpack.  
-
-Goals for the day:
-- Get a green bundle with `webpack`
-
-[COMPLETE] **Day 2**: Get the basics of `cell`s and the `board` set up.  Render the board on the page.  
-
-Goals for the day:
-- Complete the `cell.js` module (constructor, update functions)
-- Complete `city.js` and `mountain.js`
-- Render a grid to the `DOM`.
-- Make each `cell` in the grid clickable, toggling the state of the square on click
-
-[COMPLETE] **Day 3**: Get the cursor and movement working.
-
-Goals for the day:
-- Add moves to the move queue using clicks and keypresses
-- Update the `board` as moves are executed
-- End the game when a `king` is taken.
-- Render moves in the queue [LEAVING FOR LATER]
-
-**Day 4**: Add AI player
-
-Goals for the day:
-- Add an AI player that moves around the board
-- Fix up styling
-  + about modal
-  + victory modal with play again button
-  + links to github and linkedin
-- Write production readme
-
-**Bonus**:
-- Render moves in the queue
-- Add options for map-size and game-speed when starting a new game.
-- Add spectate mode where a user can watch various AI-players compete.
++ Map Improvements: Right now, the maps are randomly generated, but some simple changes would result in more interesting matches.  For example, I could always assign opposing Generals to separate quadrants of the board, and bias the placement of mountains towards the middle of the board.
