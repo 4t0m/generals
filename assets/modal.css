@@ -22,13 +22,21 @@
   justify-content: space-around;
 }
 
-.modal-content h1,h3 {
+.modal-content h1,h3,p {
   text-align: center;
   font-weight: normal;
   font-family: Roboto, sans-serif;
 }
 
-.modal-content ul {
+.modal-content h3 {
+  font-size: 30px;
+}
+
+.modal-content p {
+  font-size: 17px;
+}
+
+.modal-content ul,p {
   padding-bottom: 20px;
 }
 
