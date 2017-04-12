@@ -1,5 +1,5 @@
 body {
-  background-color: #D0D0D0;
+  background-image: url('light_grey.png');
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,7 +17,8 @@ section {
 
 h1 {
   font-size: 40px;
-  font-family: Roboto, sans-serif;
+  font-weight: bold;
+  font-family: 'Bungee Hairline', cursive;
 }
 
 table {
